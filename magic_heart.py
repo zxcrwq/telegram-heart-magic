@@ -9,7 +9,7 @@ API_HASH = '4037e9f957f6f17d461b0c288ffa50f1'
 
 HEART = '🤍'
 COLORED_HEARTS = ['💗', '💓', '💖', '💘', '❤️', '💞']
-MAGIC_PHRASES = ['magic']
+MAGIC_PHRASES = ['держи']
 EDIT_DELAY = 0.01
 
 PARADE_MAP = '''
@@ -39,15 +39,17 @@ def generate_parade_colored():
 
 
 async def process_love_words(event: NewMessage.Event):
-    await client.edit_message(event.peer_id.user_id, event.message.id, 'i')
+    await client.edit_message(event.peer_id.user_id, event.message.id, 'на')
     await asyncio.sleep(1)
-    await client.edit_message(event.peer_id.user_id, event.message.id, 'i love')
+    await client.edit_message(event.peer_id.user_id, event.message.id, 'на и')
     await asyncio.sleep(1)
-    await client.edit_message(event.peer_id.user_id, event.message.id, 'i love you')
+    await client.edit_message(event.peer_id.user_id, event.message.id, 'на и не')
     await asyncio.sleep(1)
-    await client.edit_message(event.peer_id.user_id, event.message.id, 'i love you forever')
+    await client.edit_message(event.peer_id.user_id, event.message.id, 'на и не обижайся')
     await asyncio.sleep(1)
-    await client.edit_message(event.peer_id.user_id, event.message.id, 'i love you forever💗')
+    await client.edit_message(event.peer_id.user_id, event.message.id, 'на и не обижайся пожалуйста')
+    await asyncio.sleep(1)
+    await client.edit_message(event.peer_id.user_id, event.message.id, 'на и не обижайся пожалуйста💓')
 
 
 async def process_build_place(event: NewMessage.Event):
